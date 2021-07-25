@@ -1,0 +1,23 @@
+version: "2.3"
+
+services:
+  # BCS Manager
+
+  bcsm:
+    build:
+      context: ./
+      dockerfile: ./Dockerfile
+    tty: false        
+    restart: on-failure
+    # environment:
+    # privileged: false
+    ports:
+      - "27182:27182"
+    # environment: 
+    #   - QT_X11_NO_MITSHM=1 
+    #   - DISPLAY=$DISPLAY 
+    volumes:
+      - /var/opt/bcsm/dist:/usr/share/bcsm:ro
+      # - /tmp/.X11-unix:/tmp/.X11-unix:rw
+    command: /bin/bash
+    
