@@ -7,7 +7,7 @@ services:
     build:
       context: ./
       dockerfile: ./Dockerfile
-    tty: false        
+    tty: true       
     restart: on-failure
     # environment:
     # privileged: false
