@@ -10,7 +10,7 @@ RUN apt update && apt install -y \
 
 WORKDIR /app
 
-COPY bcsm_1.7.371_amd64.deb /app/bcsm.deb
+COPY bcsm_1_8_88_amd64.deb /app/bcsm.deb
 
 RUN DEBIAN_FRONTEND=noninteractive apt install -y ./bcsm.deb
 
